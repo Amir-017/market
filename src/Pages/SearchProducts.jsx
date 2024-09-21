@@ -23,6 +23,9 @@ const SearchProducts = ({ checkSearch }) => {
   };
   useEffect(() => {
     searchItem();
+    if (!checkSearch) {
+      navigate("/");
+    }
   }, [checkSearch && checkSearch]);
   //   console.log(search);
   const navigate = useNavigate();
@@ -30,6 +33,8 @@ const SearchProducts = ({ checkSearch }) => {
   const back = () => {
     navigate("/");
   };
+  console.log(search);
+
   return (
     <div className="w-full  ">
       {Loading ? (
@@ -79,7 +84,7 @@ const SearchProducts = ({ checkSearch }) => {
               <hr className="border-t-2 border-gray-500" />
             </div>
             <div className="w-full grid grid-cols-1 gap-4 justify-items-center items-center md:grid-cols-3 lg:grid-cols-4 pb-10">
-              {search &&
+              {search.length > 0 ? (
                 search.map((prod, i) => (
                   <div className="" key={i}>
                     <Card className="mt-10 h-[75vh]  md:h-[75vh] border-black border-[1px] ">
@@ -137,7 +142,10 @@ const SearchProducts = ({ checkSearch }) => {
                       </CardFooter>
                     </Card>
                   </div>
-                ))}
+                ))
+              ) : (
+                <div className="w-full h-[40vh]"></div>
+              )}
             </div>
           </div>
         </div>

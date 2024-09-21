@@ -12,7 +12,7 @@ import { PiLockLaminatedBold } from "react-icons/pi";
 import { MdOutlineMenuOpen } from "react-icons/md";
 import { BellIcon, Cog6ToothIcon } from "@heroicons/react/24/solid";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import add from "../imges/shopping_cart-b0846037.png";
 import { CiShoppingCart, CiSun } from "react-icons/ci";
 import { FaRegMoon } from "react-icons/fa";
@@ -48,6 +48,7 @@ const Head = ({
     localStorage.theme = "light";
     setDarkLight(!darkLight);
   }
+  const navigate = useNavigate();
   const searchProd = () => {
     navigate("/search");
   };
@@ -87,12 +88,12 @@ const Head = ({
                   type="search"
                   color="white"
                   label="Type here..."
-                  className="pr-20 h-[3.5em]"
+                  className="pr-20 h-[3.6em]"
                   containerProps={{
                     className: "min-w-[725px]",
                   }}
                 />
-                <div className="absolute right-4 top-[5px]">
+                <div className="absolute right-4 top-[6px]">
                   {checkSearch ? (
                     <Button color="green" onClick={searchProd}>
                       search
@@ -457,12 +458,12 @@ const Head = ({
                 type="search"
                 color="white"
                 label="Type here..."
-                className="pr-20 h-[3.2em]"
+                className="pr-20 h-[40px]"
                 containerProps={{
                   className: "min-w-[690px]",
                 }}
               />
-              <div className="absolute right-4 bottom-[-1px]">
+              <div className="absolute right-4 bottom-[1px]">
                 {checkSearch ? (
                   <Button color="green" onClick={searchProd}>
                     search
