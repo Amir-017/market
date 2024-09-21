@@ -33,7 +33,7 @@ const SearchProducts = ({ checkSearch }) => {
   const back = () => {
     navigate("/");
   };
-  console.log(search);
+  // console.log(search);
 
   return (
     <div className="w-full  ">
