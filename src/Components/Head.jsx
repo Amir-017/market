@@ -72,7 +72,7 @@ const Head = ({
             as={Link}
             to="/"
             href="#"
-            className=" flex items-start mb-10 h-0 lg:h-16  mr-4 cursor-pointer lg:pt-10 w-[75%]  capitalize text-4xl lg:text-[2em]  text-white hover:text-green-300"
+            className=" flex items-start mb-10 h-0 lg:h-16  mr-4 cursor-pointer lg:pt-10 w-[75%]  capitalize text-4xl lg:text-[2em]  text-white hover:text-green-300 hover:dark:text-blue-gray-200"
           >
             go-market
           </Typography>
@@ -88,18 +88,25 @@ const Head = ({
                   type="search"
                   color="white"
                   label="Type here..."
-                  className="pr-20 h-[3.6em]"
+                  className="pr-20 h-[3.7em]"
                   containerProps={{
                     className: "min-w-[725px]",
                   }}
                 />
                 <div className="absolute right-4 top-[6px]">
                   {checkSearch ? (
-                    <Button color="green" onClick={searchProd}>
+                    <Button
+                      className="bg-green-700 dark:bg-[#282d45]"
+                      onClick={searchProd}
+                    >
                       search
                     </Button>
                   ) : (
-                    <Button color="green" disabled onClick={searchProd}>
+                    <Button
+                      className="bg-green-700 dark:bg-[#282d45]"
+                      disabled
+                      onClick={searchProd}
+                    >
                       search
                     </Button>
                   )}
@@ -113,7 +120,7 @@ const Head = ({
                   as={Link}
                   to="/beatuy"
                   variant="small"
-                  className="p-1 text-white hover:text-green-300 font-medium"
+                  className="p-1 text-white  hover:text-green-300 font-medium hover:dark:text-[#9b9ca5]"
                 >
                   Beatuy
                 </Typography>
@@ -121,7 +128,7 @@ const Head = ({
                   as={Link}
                   to="/frag"
                   variant="small"
-                  className="hover:text-green-300 font-medium p-1 text-white"
+                  className="hover:text-green-300 font-medium hover:dark:text-[#9b9ca5] p-1 text-white"
                 >
                   Fragrances
                 </Typography>
@@ -129,7 +136,7 @@ const Head = ({
                   as={Link}
                   to="/furniture"
                   variant="small"
-                  className="p-1 hover:text-green-300 font-medium text-white"
+                  className="p-1 hover:text-green-300 font-medium hover:dark:text-[#9b9ca5] text-white"
                 >
                   Furniture
                 </Typography>
@@ -137,7 +144,7 @@ const Head = ({
                   as={Link}
                   to="/groc"
                   variant="small"
-                  className="p-1 hover:text-green-300 font-medium text-white"
+                  className="p-1 hover:text-green-300 font-medium hover:dark:text-[#9b9ca5] text-white"
                 >
                   Groceries
                 </Typography>
@@ -145,7 +152,7 @@ const Head = ({
                   as={Link}
                   to="/homeDeco"
                   variant="small"
-                  className="p-1 hover:text-green-300 font-medium text-white"
+                  className="p-1 hover:text-green-300 font-medium hover:dark:text-[#9b9ca5] text-white"
                 >
                   Home Decoration
                 </Typography>
@@ -153,7 +160,7 @@ const Head = ({
                   as={Link}
                   to="/kitchen"
                   variant="small"
-                  className="p-1 hover:text-green-300 font-medium text-white"
+                  className="p-1 hover:text-green-300 font-medium hover:dark:text-[#9b9ca5] text-white"
                 >
                   Kitchen Accesories
                 </Typography>
@@ -161,7 +168,7 @@ const Head = ({
                   as={Link}
                   to="/lap"
                   variant="small"
-                  className="p-1 hover:text-green-300 font-medium text-white"
+                  className="p-1 hover:text-green-300 font-medium hover:dark:text-[#9b9ca5] text-white"
                 >
                   Laptops
                 </Typography>
@@ -173,10 +180,10 @@ const Head = ({
                 >
                   <Badge
                     content={num}
-                    className={num > 1 ? "bg-green-900" : "bg-red-900"}
+                    className={num > 1 ? "bg-green-900" : "bg-red-900 "}
                   >
                     <Link to="/adding">
-                      <CiShoppingCart className="text-4xl text-white hover:text-green-300 " />
+                      <CiShoppingCart className="text-4xl text-white hover:text-green-300 hover:dark:text-[#9b9ca5]" />
                     </Link>
                   </Badge>
                 </div>
@@ -184,7 +191,7 @@ const Head = ({
                   // as={Link}
                   // to="/shirts"
                   variant="small"
-                  className="p-1 hover:text-green-300 font-medium text-white relative"
+                  className="p-1 hover:text-green-300 font-medium hover:dark:text-[#9b9ca5] text-white relative"
                 >
                   {darkLight ? (
                     <button
@@ -193,12 +200,12 @@ const Head = ({
                       href="#"
                       data-twe-dropdown-item-ref
                     >
-                      <CiSun className="pb-2 hover:text-green-300" />
+                      <CiSun className="pb-2 hover:text-green-300 " />
                     </button>
                   ) : (
                     <button
                       onClick={setDarkTheme}
-                      className="absolute left-0 top-[1px] text-2xl block w-full whitespace-nowrap  px-4 py-2  font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                      className="absolute  left-0 top-[1px] text-2xl block w-full whitespace-nowrap  px-4 py-2  font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
                       href="#"
                       data-twe-dropdown-item-ref
                     >
@@ -218,7 +225,7 @@ const Head = ({
                         your shopping cart is empty
                       </h2>
                       <h1
-                        className="mb-10 font-bold capitalize rounded-md bg-green-900 py-3 px-10  border border-transparent text-center text-sm text-white transition-all shadow-lg hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
+                        className="mb-10 font-bold capitalize rounded-md bg-green-700 dark:bg-[#282d45]  py-3 px-10  border border-transparent text-center text-sm text-white transition-all shadow-lg hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
                         type="button"
                       >
                         go shopping now
@@ -226,15 +233,15 @@ const Head = ({
                     </div>
                   ) : (
                     <div className="w-full  container mx-auto border-[2px] border-green-900 rounded-2xl">
-                      <div className="w-full  flex flex-col justify-center items-center  border-[1px] border-green-700 rounded-2xl font-serif">
-                        <h1 className="ms-2 lg:text-2xl font-bold text-black dark:text-white">
+                      <div className="w-full  flex flex-col justify-center items-center  border-[1px] border-green-700 rounded-2xl ">
+                        <h1 className="ms-2 font-serif lg:text-2xl font-bold text-black dark:text-white">
                           You Have{" "}
                           <span className="underline text-green-900 dark:text-green-300 mx-1">
                             ({aboutAdding && aboutAdding.length})
                           </span>
                           Item Now
                         </h1>
-                        <h1 className="capitalize mt-2 ms-2 text-gray-700 dark:text-gray-300 font-bold">
+                        <h1 className="capitalize font-normal mt-2 ms-2 text-gray-700 dark:text-gray-300 ">
                           click to show your products
                         </h1>
                       </div>
@@ -294,7 +301,7 @@ const Head = ({
                 as={Link}
                 to="/beatuy"
                 variant="small"
-                className="p-1 text-white hover:text-green-300 font-medium"
+                className="p-1 text-white hover:text-green-300 font-medium hover:dark:text-[#9b9ca5]"
               >
                 Beatuy
               </Typography>
@@ -302,7 +309,7 @@ const Head = ({
                 as={Link}
                 to="/frag"
                 variant="small"
-                className="hover:text-green-300 font-medium p-1 text-white"
+                className="hover:text-green-300 font-medium hover:dark:text-[#9b9ca5] p-1 text-white"
               >
                 Fragrances
               </Typography>
@@ -310,7 +317,7 @@ const Head = ({
                 as={Link}
                 to="/furniture"
                 variant="small"
-                className="p-1 hover:text-green-300 font-medium text-white"
+                className="p-1 hover:text-green-300 font-medium hover:dark:text-[#9b9ca5] text-white"
               >
                 Furniture
               </Typography>
@@ -318,7 +325,7 @@ const Head = ({
                 as={Link}
                 to="/groc"
                 variant="small"
-                className="p-1 hover:text-green-300 font-medium text-white"
+                className="p-1 hover:text-green-300 font-medium hover:dark:text-[#9b9ca5] text-white"
               >
                 Groceries
               </Typography>
@@ -326,7 +333,7 @@ const Head = ({
                 as={Link}
                 to="/homeDeco"
                 variant="small"
-                className="p-1 hover:text-green-300 font-medium text-white"
+                className="p-1 hover:text-green-300 font-medium hover:dark:text-[#9b9ca5] text-white"
               >
                 Home Decoration
               </Typography>
@@ -334,7 +341,7 @@ const Head = ({
                 as={Link}
                 to="/kitchen"
                 variant="small"
-                className="p-1 hover:text-green-300 font-medium text-white"
+                className="p-1 hover:text-green-300 font-medium hover:dark:text-[#9b9ca5] text-white"
               >
                 Kitchen Accesories
               </Typography>
@@ -342,7 +349,7 @@ const Head = ({
                 as={Link}
                 to="/lap"
                 variant="small"
-                className="p-1 hover:text-green-300 font-medium text-white"
+                className="p-1 hover:text-green-300 font-medium hover:dark:text-[#9b9ca5] text-white"
               >
                 Laptops
               </Typography>
@@ -350,7 +357,7 @@ const Head = ({
               <div
                 // as={Link}
                 variant="small"
-                className={`mt-2 p-1 font-medium text-white relative  cursor-pointer h-6 peer`}
+                className={`mt-2 p-1 font-medium text-white relative  cursor-pointer h-6 peer hover:dark:text-[#9b9ca5]`}
               >
                 <Badge
                   content={num}
@@ -365,7 +372,7 @@ const Head = ({
                 // as={Link}
                 // to="/shirts"
                 variant="small"
-                className="p-1 hover:text-green-300 font-medium text-white relative"
+                className="p-1 hover:text-green-300 hover:dark:text-[#9b9ca5]  font-medium text-white relative"
               >
                 {darkLight ? (
                   <button
@@ -406,11 +413,11 @@ const Head = ({
                     </h1>
                   </div>
                 ) : (
-                  <div className="w-full  container mx-auto border-[2px] border-green-900 rounded-2xl">
+                  <div className="w-full  container mx-auto border-[2px]  border-green-900 rounded-2xl">
                     <div className="w-full  flex flex-col justify-center items-center  border-[1px] border-green-700 rounded-2xl font-serif">
                       <h1 className="ms-2 lg:text-2xl font-bold text-black dark:text-white">
                         You Have{" "}
-                        <span className="underline text-green-900 dark:text-green-300 mx-1">
+                        <span className="underline   mx-1">
                           ({aboutAdding && aboutAdding.length})
                         </span>
                         Item Now
@@ -465,11 +472,18 @@ const Head = ({
               />
               <div className="absolute right-4 bottom-[1px]">
                 {checkSearch ? (
-                  <Button color="green" onClick={searchProd}>
+                  <Button
+                    className="bg-green-700 dark:bg-[#282d45] "
+                    onClick={searchProd}
+                  >
                     search
                   </Button>
                 ) : (
-                  <Button color="green" disabled onClick={searchProd}>
+                  <Button
+                    className="bg-green-700 dark:bg-[#282d45] "
+                    disabled
+                    onClick={searchProd}
+                  >
                     search
                   </Button>
                 )}

@@ -11,8 +11,6 @@ import {
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 const Beatuy = () => {
-  const [all, setAll] = useState([]);
-
   const [beatuy, setBeatuy] = useState([]);
   const [Loading, setLoading] = useState(false);
   setTimeout(() => {

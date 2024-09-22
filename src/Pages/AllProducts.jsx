@@ -17,7 +17,7 @@ import {
   Spinner,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-const AllProducts = () => {
+const AllProducts = ({ check }) => {
   const [products, setProducts] = useState([]);
   const [Loading, setLoading] = useState(false);
   setTimeout(() => {
@@ -42,7 +42,7 @@ const AllProducts = () => {
         <img src={img1} alt="image 3" className="h-[40%] w-full object-cover" />
       </Carousel>
 
-      <div className="w-full dark:bg-blue-gray-900 bg-[#EAEAEA]">
+      <div className=" w-full dark:bg-blue-gray-900 bg-[#EAEAEA]">
         <div className="container mx-auto">
           <div className="w-full h-40 pt-[2em]">
             <div className="w-full dark:bg-blue-gray-800 bg-[#EAEAEA]  h-20  rounded-xl flex shadow-lg mb-20  items-center  ">

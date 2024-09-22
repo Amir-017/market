@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "./Components/Header";
 import { Link, Route, Routes } from "react-router-dom";
 import AllProducts from "./Pages/AllProducts";
 import Beatuy from "./Pages/Beatuy";
@@ -39,7 +38,6 @@ import WomensWatches from "./Pages/WomensWatches";
 import DetailsItem from "./Pages/Details/DetailsItem";
 import Footer from "./Components/Footer";
 import AddToCart from "./Pages/Add to cart/AddToCart";
-import axios from "axios";
 import SearchProducts from "./Pages/SearchProducts";
 import Head from "./Components/Head";
 const App = () => {
@@ -65,12 +63,12 @@ const App = () => {
   // console.log(Loading);
 
   return (
-    <div className="bg-white dark:bg-blue-gray-900">
+    <div className="bg-white dark:bg-blue-gray-900 ">
       <div className="">
         <React.Fragment>
           <Drawer
             open={open}
-            className="p-4 w-full overflow-auto   dark:bg-blue-gray-900 dark:text-white"
+            className="amer p-4 w-full overflow-auto   dark:bg-blue-gray-900 dark:text-white"
           >
             <div className="mb-6 flex items-center justify-between">
               <Typography variant="h5" color="blue-gray">
@@ -298,14 +296,6 @@ const App = () => {
         </React.Fragment>
       </div>
 
-      {/* <Header
-        openDrawer={openDrawer}
-        num={num}
-        setNum={setNum}
-        setCheckSearch={setCheckSearch}
-        checkSearch={checkSearch}
-        aboutAdding={aboutAdding}
-      /> */}
       <Head
         openDrawer={openDrawer}
         num={num}
@@ -315,7 +305,7 @@ const App = () => {
         aboutAdding={aboutAdding}
       />
 
-      <div className={` ${check ? "bg-opacity-60 blur-sm " : ""} `}>
+      <div className={` ${check ? " blur-sm " : ""} `}>
         <Routes>
           <Route path="/" element={<AllProducts />} />
           <Route path="/beatuy" element={<Beatuy Loading={Loading} />} />

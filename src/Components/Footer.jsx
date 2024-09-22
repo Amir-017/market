@@ -11,8 +11,7 @@ const Footer = () => {
           <Typography
             as="a"
             href="#"
-            color="blue-gray"
-            className="font-bold text-white transition-colors hover:text-blue-500 focus:text-blue-500"
+            className="font-bold text-white transition-colors hover:text-green-500 focus:text-green-500 hover:dark:text-[#9b9ca5]"
           >
             About Us
           </Typography>
@@ -21,8 +20,7 @@ const Footer = () => {
           <Typography
             as="a"
             href="#"
-            color="blue-gray"
-            className="font-bold text-white transition-colors hover:text-blue-500 focus:text-blue-500"
+            className="font-bold text-white transition-colors hover:text-green-500 focus:text-green-500 hover:dark:text-[#9b9ca5]"
           >
             License
           </Typography>
@@ -31,8 +29,7 @@ const Footer = () => {
           <Typography
             as="a"
             href="#"
-            color="blue-gray"
-            className="font-bold text-white transition-colors hover:text-blue-500 focus:text-blue-500"
+            className="font-bold text-white transition-colors hover:text-green-500 focus:text-green-500 hover:dark:text-[#9b9ca5]"
           >
             Contribute
           </Typography>
@@ -41,8 +38,7 @@ const Footer = () => {
           <Typography
             as="a"
             href="#"
-            color="blue-gray"
-            className="font-bold text-white transition-colors hover:text-blue-500 focus:text-blue-500"
+            className="font-bold text-white transition-colors hover:text-green-500 focus:text-green-500 hover:dark:text-[#9b9ca5]"
           >
             Contact Us
           </Typography>

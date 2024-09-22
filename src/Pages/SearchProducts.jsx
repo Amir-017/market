@@ -151,7 +151,6 @@ const SearchProducts = ({ checkSearch }) => {
         </div>
       ) : (
         <div className="w-full h-[80vh] dark:bg-blue-gray-900 bg-[#EAEAEA] flex justify-center items-center ">
-          {/* <Spinner color="green" className="w-16 h-16 " /> */}
           <div className="loader"></div>
         </div>
       )}
