@@ -68,7 +68,7 @@ const App = () => {
         <React.Fragment>
           <Drawer
             open={open}
-            className="amer p-4 w-full overflow-auto   dark:bg-blue-gray-900 dark:text-white"
+            className="amer p-4 w-[70%] lg:w-full overflow-auto   dark:bg-blue-gray-900 dark:text-white"
           >
             <div className="mb-6 flex items-center justify-between">
               <Typography variant="h5" color="blue-gray">
@@ -296,16 +296,16 @@ const App = () => {
         </React.Fragment>
       </div>
 
-      <Head
-        openDrawer={openDrawer}
-        num={num}
-        setNum={setNum}
-        setCheckSearch={setCheckSearch}
-        checkSearch={checkSearch}
-        aboutAdding={aboutAdding}
-      />
-
       <div className={` ${check ? " blur-sm " : ""} `}>
+        <Head
+          openDrawer={openDrawer}
+          num={num}
+          setNum={setNum}
+          setCheckSearch={setCheckSearch}
+          checkSearch={checkSearch}
+          aboutAdding={aboutAdding}
+        />
+
         <Routes>
           <Route path="/" element={<AllProducts />} />
           <Route path="/beatuy" element={<Beatuy Loading={Loading} />} />

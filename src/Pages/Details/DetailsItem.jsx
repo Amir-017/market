@@ -85,14 +85,14 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setNum, num }) => {
               <span className="font-bold dark:text-gray-400">|</span>{" "}
               <h1 className="font-bold dark:text-white">
                 Brand :{" "}
-                <span className="text-green-500 underline">
+                <span className="text-green-500 underline dark:text-blue-gray-400">
                   {details?.brand ? details?.brand : "Unkown"}
                 </span>
               </h1>{" "}
               <span className="font-bold dark:text-gray-400">|</span>{" "}
               <h1 className="font-bold dark:text-white">
                 Category :{" "}
-                <span className="text-green-500 underline">
+                <span className="text-green-500 underline dark:text-blue-gray-400">
                   {details ? details.category : ""}
                 </span>
               </h1>{" "}
@@ -100,10 +100,8 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setNum, num }) => {
             <div className="w-full mt-16 dark:bg-[#252B43] bg-gray-200  rounded-xl container ps-2 dark:text-gray-400 text-gray-600 ">
               <div className="flex gap-x-2 pt-5 justify-center md:justify-start">
                 <h1 className="font-bold line-through me-1 ">
+                  <span className=" me-1">{details ? details.price : ""}</span>
                   EGP
-                  <span className="font-medium ">
-                    {details ? details.price : ""}
-                  </span>
                 </h1>
                 <span className="text-grya-600">inclusive in takes</span>
               </div>

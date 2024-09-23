@@ -63,7 +63,7 @@ const Head = ({
           {" "}
           <Button
             onClick={openDrawer}
-            className=" w-4 me-1 text-3xl text-white bg-transparent  pt-2 lg:pt-7"
+            className=" w-4 me-1 text-3xl text-white bg-transparent  pt-2 lg:pt-1"
             variant="text"
           >
             <MdOutlineMenuOpen />
@@ -72,7 +72,7 @@ const Head = ({
             as={Link}
             to="/"
             href="#"
-            className=" flex items-start mb-10 h-0 lg:h-16  mr-4 cursor-pointer lg:pt-10 w-[75%]  capitalize text-4xl lg:text-[2em]  text-white hover:text-green-300 hover:dark:text-blue-gray-200"
+            className=" flex items-start mb-10 h-0 lg:h-16  mr-4 cursor-pointer lg:pt-7 w-[75%]  capitalize text-4xl lg:text-[2.2em]  text-white hover:text-green-300 hover:dark:text-blue-gray-200"
           >
             go-market
           </Typography>
@@ -115,7 +115,7 @@ const Head = ({
             </div>
 
             <div className="ml-auto w-[95%]  flex gap-1 md:mr-4 ">
-              <ul className=" h-10   relatvie w-full gap-x-2  mb-4 p-3  flex flex-row  lg:mb-0 lg:mt-0 justify-start    ">
+              <ul className=" h-10   relatvie w-full gap-x-2  mb-4 p-3  flex flex-row  lg:mb-0 lg:mt-0 justify-start lg:ps-5    ">
                 <Typography
                   as={Link}
                   to="/beatuy"
@@ -213,9 +213,9 @@ const Head = ({
                     </button>
                   )}
                 </div>
-                <div className="hidden peer-hover:block rounded-xl absolute  w-[80%] md:w-[60%] lg:w-[40%] peer-hover:bg-gray-100 peer-hover:dark:bg-blue-gray-900 md:left-1 top-[29em] left-[1em]  lg:left-[45em]  lg:top-[9rem] ">
+                <div className="invisible peer-hover:visible peer rounded-xl absolute  w-[80%] md:w-[60%] lg:w-[40%] peer-hover:bg-gray-50 peer-hover:dark:bg-blue-gray-900 md:left-1 top-[29em] left-[1em]  lg:left-[45em]  lg:top-[8rem] ">
                   {aboutAdding && aboutAdding.length == 0 ? (
-                    <div className="peer-hover:block w-full h-full flex flex-col justify-center items-center  gap-y-3">
+                    <div className="  w-full h-full flex flex-col justify-center items-center  gap-y-3">
                       <img
                         src={add}
                         alt=""
