@@ -82,35 +82,35 @@ const Head = ({
           {/* <NavList /> */}
           <div className="w-[100%] h-0 lg:h-20 flex flex-col  items-center">
             <div className="w-full flex justify-center ">
-              <div className=" relative   gap-2 md:w-max mb-2">
+              <div className="relative flex w-full gap-2 md:w-max">
                 <Input
                   onKeyUp={(e) => setCheckSearch(e.target.value)}
                   type="search"
                   color="white"
                   label="Type here..."
-                  className="pr-20 h-[3.7em]"
+                  className="pr-20"
                   containerProps={{
                     className: "min-w-[725px]",
                   }}
                 />
-                <div className="absolute right-4 top-[6px]">
-                  {checkSearch ? (
-                    <Button
-                      className="bg-green-700 dark:bg-[#282d45]"
-                      onClick={searchProd}
-                    >
-                      search
-                    </Button>
-                  ) : (
-                    <Button
-                      className="bg-green-700 dark:bg-[#282d45]"
-                      disabled
-                      onClick={searchProd}
-                    >
-                      search
-                    </Button>
-                  )}
-                </div>
+                {checkSearch ? (
+                  <Button
+                    size="sm"
+                    className="!absolute right-1 top-[.29rem] rounded bg-green-700 dark:bg-[#282d45] "
+                    onClick={searchProd}
+                  >
+                    search
+                  </Button>
+                ) : (
+                  <Button
+                    size="sm"
+                    className="!absolute right-1 top-[.29rem] rounded bg-green-700 dark:bg-[#282d45]"
+                    disabled
+                    onClick={searchProd}
+                  >
+                    search
+                  </Button>
+                )}
               </div>
             </div>
 
@@ -470,24 +470,24 @@ const Head = ({
                   className: "min-w-[690px]",
                 }}
               />
-              <div className="absolute right-4 bottom-[1px]">
-                {checkSearch ? (
-                  <Button
-                    className="bg-green-700 dark:bg-[#282d45] "
-                    onClick={searchProd}
-                  >
-                    search
-                  </Button>
-                ) : (
-                  <Button
-                    className="bg-green-700 dark:bg-[#282d45] "
-                    disabled
-                    onClick={searchProd}
-                  >
-                    search
-                  </Button>
-                )}
-              </div>
+              {checkSearch ? (
+                <Button
+                  size="sm"
+                  className="!absolute right-1 top-[.29rem] rounded bg-green-700 dark:bg-[#282d45] "
+                  onClick={searchProd}
+                >
+                  search
+                </Button>
+              ) : (
+                <Button
+                  size="sm"
+                  className="!absolute right-1 top-[.29rem] rounded bg-green-700 dark:bg-[#282d45]"
+                  disabled
+                  onClick={searchProd}
+                >
+                  search
+                </Button>
+              )}
             </div>
           </div>
         </div>
