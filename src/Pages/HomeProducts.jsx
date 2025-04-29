@@ -4,6 +4,8 @@ import img1 from "../imges/slider_img_1-aa711fe6.jpg";
 import img2 from "../imges/slider_img_2-ad43ef2a.jpg";
 import axios from "axios";
 import { CiShoppingCart } from "react-icons/ci";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 import {
   Card,
@@ -64,10 +66,11 @@ const AllProducts = ({ check }) => {
                         </h1>
 
                         {prod.images.slice(-1).map((im, it) => (
-                          <img
+                          <LazyLoadImage
+                            key={it}
                             alt="card-image"
                             src={im}
-                            key={it}
+                            effect="blur" // تأثير التحميل
                             className="w-full h-56"
                           />
                         ))}
