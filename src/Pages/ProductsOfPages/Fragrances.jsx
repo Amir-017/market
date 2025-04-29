@@ -55,7 +55,6 @@ const Fragrances = () => {
                             alt="card-image"
                             src={im}
                             key={it}
-                            property="true"
                             className="w-full h-56"
                           />
                         ))}
