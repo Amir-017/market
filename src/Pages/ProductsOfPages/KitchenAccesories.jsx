@@ -24,6 +24,9 @@ const KitchenAccesories = () => {
 
   useEffect(() => {
     getKit();
+    kitchen.map((prod) => {
+      console.log(prod.brand);
+    });
   }, []);
 
   return (
