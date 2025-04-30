@@ -75,7 +75,7 @@ const SearchProducts = ({ checkSearch }) => {
               </div>
             </div>
             <div className="w-full text-black my-10 text-xl font-bold dark:text-white">
-              Product Length :{" "}
+              Product Quantity :{" "}
               <span className="text-green-900 dark:text-green-300 ">
                 {search && search.length}
               </span>

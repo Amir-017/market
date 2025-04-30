@@ -105,7 +105,7 @@ const Head = ({
                     size="sm"
                     className="!absolute right-1 top-[.29rem] rounded bg-green-300 dark:bg-[#282d45]"
                     disabled
-                    onClick={searchProd}
+                    // onClick={searchProd}
                   >
                     search
                   </Button>

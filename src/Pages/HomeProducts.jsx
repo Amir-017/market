@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
 import img1 from "../imges/slider_img_1-aa711fe6.jpg";
 import img2 from "../imges/slider_img_2-ad43ef2a.jpg";
 import axios from "axios";
-import { CiShoppingCart } from "react-icons/ci";
 
 import {
   Card,
@@ -13,8 +11,6 @@ import {
   Typography,
   Button,
   Carousel,
-  Badge,
-  Spinner,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 const AllProducts = ({ check }) => {
@@ -31,6 +27,11 @@ const AllProducts = ({ check }) => {
   };
 
   useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    window.scrollTo(0, 0);
     getProducts();
   }, []);
 
@@ -115,7 +116,6 @@ const AllProducts = ({ check }) => {
             </div>
           ) : (
             <div className="w-full h-[80vh] bg-[#EAEAEA] flex justify-center items-center ">
-              {/* <Spinner color="green" className="w-16 h-16 " /> */}
               <div className="loader"></div>
             </div>
           )}

@@ -19,12 +19,14 @@ const Motorcycle = () => {
     axios({
       method: "get",
       url: "https://dummyjson.com/products/category/motorcycle",
+      timeout: 10000,
     }).then((data) => setMotor(data.data.products));
   };
 
   useEffect(() => {
     getMot();
   }, []);
+  console.log(motor);
 
   return (
     <div className="w-full  ">

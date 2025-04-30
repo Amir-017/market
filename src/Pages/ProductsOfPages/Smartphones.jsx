@@ -19,6 +19,7 @@ const Smartphones = () => {
     axios({
       method: "get",
       url: "https://dummyjson.com/products/category/smartphones",
+      timeout: 10000,
     }).then((data) => setsmartPhone(data.data.products));
   };
 
