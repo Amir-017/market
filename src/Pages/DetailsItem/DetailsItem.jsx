@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { CiShoppingCart } from "react-icons/ci";
 import { Button } from "@material-tailwind/react";
-const DetailsItem = ({ aboutAdding, setAboutAdding, setNum, num }) => {
+const DetailsItem = ({ aboutAdding, setAboutAdding, setcounter, counter }) => {
   const [details, setDetails] = useState({});
   const { id } = useParams();
 
@@ -15,6 +15,11 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setNum, num }) => {
   };
 
   useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    window.scrollTo(0, 0);
     getDetails();
   }, []);
 
@@ -23,7 +28,7 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setNum, num }) => {
       return item.id == d.id;
     });
     if (check) {
-      setNum(num + 1);
+      setcounter(counter + 1);
       const check1 = aboutAdding.map((product) => {
         if (product.id == d.id) {
           product.item++;
@@ -32,7 +37,7 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setNum, num }) => {
       });
       setAboutAdding(check1);
     } else {
-      setNum(num + 1);
+      setcounter(counter + 1);
 
       setAboutAdding([...aboutAdding, { ...d, item: 1 }]);
     }
@@ -47,7 +52,7 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setNum, num }) => {
               <div className="w-full " key={i}>
                 <div className="  flex justify-center items-center">
                   {i == 0 && (
-                    <img src={item} alt="" className="w-[45%] md:w-[40%]" />
+                    <img src={item} alt="" className="w-[40%] md:w-[35%]" />
                   )}
                 </div>
               </div>
@@ -55,12 +60,15 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setNum, num }) => {
             {/*  */}
             <div className="flex md:justify-evenly mt-10 flex-row">
               {details.images?.map((item, i) => (
-                <div className="flex justify-center  " key={i}>
-                  {i <= 2 && (
+                <div
+                  className="flex justify-center  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
+                  key={i}
+                >
+                  {i == 1 && (
                     <img
                       src={item}
                       alt=""
-                      className="w-[25%] md:w-[25%]    hover:border-2 hover:border-green-900 hover:dark:border-white"
+                      className="w-[20%] md:w-[20%]     hover:border-2 hover:border-green-900 hover:dark:border-white"
                     />
                   )}
                 </div>
@@ -76,20 +84,24 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setNum, num }) => {
               {details ? details.description : ""}
             </h2>
             <div className=" w-full  flex flex-col md:flex-row gap-y-3  gap-x-3 mt-10 justify-center items-center md:items-start md:justify-start">
-              <h1 className="font-bold dark:text-white ms-2 md:ms-0  ">
+              <h1 className="font-bold dark:text-white   ">
                 Rating :{" "}
                 <span className="dark:text-blue-gray-400 text-green-500 underline">
                   {details ? details.rating : ""}
                 </span>
               </h1>{" "}
-              <span className="font-bold dark:text-gray-400">|</span>{" "}
-              <h1 className="font-bold dark:text-white">
+              <span className="font-bold dark:text-gray-400">||</span>{" "}
+              <h1 className="font-bold dark:text-white text-center">
                 Brand :{" "}
                 <span className="text-green-500 underline dark:text-blue-gray-400">
-                  {details?.brand ? details?.brand : "Unkown"}
+                  {details.brand
+                    ? details.brand
+                    : details.tags
+                    ? details.tags.map((im) => im)
+                    : "UNKNOWN"}
                 </span>
               </h1>{" "}
-              <span className="font-bold dark:text-gray-400">|</span>{" "}
+              <span className="font-bold dark:text-gray-400">||</span>{" "}
               <h1 className="font-bold dark:text-white">
                 Category :{" "}
                 <span className="text-green-500 underline dark:text-blue-gray-400">

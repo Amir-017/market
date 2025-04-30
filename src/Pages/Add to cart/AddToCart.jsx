@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { Button, Card, Typography } from "@material-tailwind/react";
 import { FaRegTrashCan } from "react-icons/fa6";
 
-const AddToCart = ({ aboutAdding, setAboutAdding, num, setNum }) => {
+const AddToCart = ({ aboutAdding, setAboutAdding, counter, setcounter }) => {
   const navigate = useNavigate();
   const go = () => {
-    navigate(-2);
+    navigate("/");
   };
 
   const TABLE_HEAD = [
@@ -25,7 +25,7 @@ const AddToCart = ({ aboutAdding, setAboutAdding, num, setNum }) => {
       return product;
     });
     setAboutAdding(incressProduct);
-    setNum((num += 1));
+    setcounter((counter += 1));
   };
 
   const decress = (prod) => {
@@ -33,7 +33,7 @@ const AddToCart = ({ aboutAdding, setAboutAdding, num, setNum }) => {
       if (product == prod) {
         if (product.item > 1) {
           product.item--;
-          setNum((num -= 1));
+          setcounter((counter -= 1));
         }
       }
       return product;
@@ -42,7 +42,7 @@ const AddToCart = ({ aboutAdding, setAboutAdding, num, setNum }) => {
   };
   const clear = () => {
     setAboutAdding([]);
-    setNum(0);
+    setcounter(0);
   };
 
   const del = (prod) => {
@@ -50,7 +50,7 @@ const AddToCart = ({ aboutAdding, setAboutAdding, num, setNum }) => {
       return product != prod;
     });
     setAboutAdding(dellProduct);
-    setNum(num - prod?.item);
+    setcounter(counter - prod?.item);
   };
   return (
     <div className="w-full ">

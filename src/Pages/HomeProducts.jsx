@@ -83,7 +83,11 @@ const AllProducts = ({ check }) => {
                       >
                         Brand:{" "}
                         <span className="text-green-600 font-medium">
-                          {prod.brand ? prod.brand : "Unkown"}
+                          {prod.brand
+                            ? prod.brand
+                            : prod.tags
+                            ? prod.tags.map((im) => im)
+                            : "UNKNOWN"}
                         </span>
                         <hr className="my-1 border-t-2 border-black" />
                       </Typography>

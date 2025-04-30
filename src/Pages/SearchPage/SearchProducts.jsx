@@ -22,6 +22,11 @@ const SearchProducts = ({ checkSearch }) => {
     }).then((data) => setSearch(data.data.products));
   };
   useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    window.scrollTo(0, 0);
     searchItem();
     if (!checkSearch) {
       navigate("/");
@@ -88,7 +93,7 @@ const SearchProducts = ({ checkSearch }) => {
                     <Card className="mt-10 h-[75vh]  md:h-[75vh] border-black border-[1px] ">
                       <CardHeader color="white" className="relative h-96 ">
                         <div className=" py-3">
-                          <h1 className="bg-green-600 dark:bg-blue-gray-900  w-24 h-15 text-center pt-3 text-white rounded font-bold">
+                          <h1 className="bg-green-600 dark:bg-blue-gray-900  w-24 h-15 text-center pt-3 pb-1 text-white rounded font-bold">
                             {prod.category}
                           </h1>
 
@@ -111,7 +116,11 @@ const SearchProducts = ({ checkSearch }) => {
                         >
                           Brand:{" "}
                           <span className="text-green-600 font-medium">
-                            {prod.brand ? prod.brand : "Unkown"}
+                            {prod.brand
+                              ? prod.brand
+                              : prod.tags
+                              ? prod.tags.map((im) => im)
+                              : "UNKNOWN"}
                           </span>
                           <hr className="my-1 border-t-2 border-black" />
                         </Typography>

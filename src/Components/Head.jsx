@@ -16,7 +16,7 @@ import { CiShoppingCart, CiSun } from "react-icons/ci";
 import { FaRegMoon } from "react-icons/fa";
 const Head = ({
   openDrawer,
-  num,
+  counter,
   setCheckSearch,
   checkSearch,
   aboutAdding,
@@ -178,8 +178,8 @@ const Head = ({
                   className={` p-1 font-medium text-white relative  cursor-pointer h-6 peer`}
                 >
                   <Badge
-                    content={num}
-                    className={num > 1 ? "bg-green-900" : "bg-red-900 "}
+                    content={counter}
+                    className={counter > 1 ? "bg-green-900" : "bg-red-900 "}
                   >
                     <Link to="/adding">
                       <CiShoppingCart className="text-4xl text-white hover:text-green-300 hover:dark:text-[#9b9ca5]" />
@@ -356,8 +356,8 @@ const Head = ({
                 className={`mt-2 p-1 font-medium text-white relative  cursor-pointer h-6 peer hover:dark:text-[#9b9ca5]`}
               >
                 <Badge
-                  content={num}
-                  className={num > 1 ? "bg-green-900" : "bg-red-900"}
+                  content={counter}
+                  className={counter > 1 ? "bg-green-900" : "bg-red-900"}
                 >
                   <Link to="/adding">
                     <CiShoppingCart className="text-4xl text-white hover:text-green-300 " />

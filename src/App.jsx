@@ -34,7 +34,7 @@ import Head from "./Components/Head";
 import { Drawer, Typography, IconButton } from "@material-tailwind/react";
 
 const App = () => {
-  const [num, setNum] = useState(0);
+  const [counter, setcounter] = useState(0);
   const [aboutAdding, setAboutAdding] = useState([]);
   const [open, setOpen] = React.useState(false);
   const [check, setCheck] = useState(false);
@@ -55,7 +55,7 @@ const App = () => {
 
   return (
     <div className="bg-white dark:bg-blue-gray-900 ">
-      <div className="removeShadwBlack">
+      <div className="removeShadowBlack">
         <React.Fragment>
           <Drawer
             open={open}
@@ -290,8 +290,8 @@ const App = () => {
       <div className={` ${check ? " blur-sm " : ""}  `}>
         <Head
           openDrawer={openDrawer}
-          num={num}
-          setNum={setNum}
+          counter={counter}
+          setcounter={setcounter}
           setCheckSearch={setCheckSearch}
           checkSearch={checkSearch}
           aboutAdding={aboutAdding}
@@ -365,8 +365,8 @@ const App = () => {
               <AddToCart
                 aboutAdding={aboutAdding}
                 setAboutAdding={setAboutAdding}
-                num={num}
-                setNum={setNum}
+                counter={counter}
+                setcounter={setcounter}
                 Loading={Loading}
               />
             }
@@ -377,8 +377,8 @@ const App = () => {
               <DetailsItem
                 aboutAdding={aboutAdding}
                 setAboutAdding={setAboutAdding}
-                num={num}
-                setNum={setNum}
+                counter={counter}
+                setcounter={setcounter}
                 Loading={Loading}
               />
             }

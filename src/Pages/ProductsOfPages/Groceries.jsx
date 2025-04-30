@@ -23,6 +23,11 @@ const Groceries = () => {
   };
 
   useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    window.scrollTo(0, 0);
     getGroc();
   }, []);
 
@@ -69,7 +74,9 @@ const Groceries = () => {
                       >
                         Brand:{" "}
                         <span className="text-green-600 font-medium">
-                          {prod.brand ? prod.brand : "Unkown"}
+                          {prod?.tags.map((im) => {
+                            return im;
+                          })}
                         </span>
                         <hr className="my-1 border-t-2 border-black" />
                       </Typography>
