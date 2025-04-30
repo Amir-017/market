@@ -52,10 +52,17 @@ const AddToCart = ({ aboutAdding, setAboutAdding, counter, setcounter }) => {
     setAboutAdding(dellProduct);
     setcounter(counter - prod?.item);
   };
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="w-full ">
       {aboutAdding.length == 0 ? (
-        <div className="w-full dark:bg-blue-gray-900 bg-gray-300 min-h-[80vh] flex justify-center items-center ">
+        <div className="w-full dark:bg-blue-gray-900 bg-gray-300 min-h-screen flex justify-center items-center ">
           <div className="  flex flex-col justify-center items-center  gap-y-3">
             <img
               src={add}
