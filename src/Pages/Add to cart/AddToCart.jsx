@@ -55,8 +55,8 @@ const AddToCart = ({ aboutAdding, setAboutAdding, counter, setcounter }) => {
   return (
     <div className="w-full ">
       {aboutAdding.length == 0 ? (
-        <div className=" dark:bg-blue-gray-900 bg-gray-300 h-[72.5vh] ">
-          <div className=" h-full flex flex-col justify-center items-center  gap-y-3">
+        <div className="w-full dark:bg-blue-gray-900 bg-gray-300 min-h-[80vh] flex justify-center items-center ">
+          <div className="  flex flex-col justify-center items-center  gap-y-3">
             <img
               src={add}
               alt=""
@@ -75,7 +75,7 @@ const AddToCart = ({ aboutAdding, setAboutAdding, counter, setcounter }) => {
           </div>
         </div>
       ) : (
-        <div className="flex flex-col ">
+        <div className="flex flex-col w-full min-h-screen justify-center items-center">
           <div className="container mx-auto mt-10    overflow-auto    w-[80%]  flex flex-col justify-center ">
             <h1 className="w-full text-3xl text-center block md:hidden dark:text-white text-black my-5">
               | This Table Is OverFlow |
@@ -178,7 +178,7 @@ const AddToCart = ({ aboutAdding, setAboutAdding, counter, setcounter }) => {
               </table>
             </Card>
           </div>
-          <div className="w-[80%]  mb-[9.5em] container mx-auto dark:bg-[#252B43] bg-gray-300 rounded-xl mt-20 flex flex-col ">
+          <div className="w-[80%]   container mx-auto dark:bg-[#252B43] bg-gray-300 rounded-xl mt-5 flex flex-col ">
             <div className="px-3 mt-2 flex flex-col md:flex-row justify-center md:justify-between items-center w-full">
               <div className="flex relative">
                 <Button

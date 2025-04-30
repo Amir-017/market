@@ -48,7 +48,7 @@ const SunGlasses = () => {
             <div className="w-full grid grid-cols-1 gap-4 justify-items-center items-center md:grid-cols-3 lg:grid-cols-4 pb-10">
               {glasses.map((prod, i) => (
                 <div className="" key={i}>
-                  <Card className="mt-10 h-[75vh]  md:h-[75vh] border-black border-[1px] ">
+                  <Card className="mt-10  border-black border-[1px] ">
                     <CardHeader color="white" className="relative h-96 ">
                       <div className=" py-3">
                         <h1 className="bg-green-600 dark:bg-blue-gray-900  w-24 h-14 text-center pt-3 text-white rounded font-bold">

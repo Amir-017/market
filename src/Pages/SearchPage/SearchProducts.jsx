@@ -90,7 +90,7 @@ const SearchProducts = ({ checkSearch }) => {
               {search.length > 0 ? (
                 search.map((prod, i) => (
                   <div className="" key={i}>
-                    <Card className="mt-10 h-[75vh]  md:h-[75vh] border-black border-[1px] ">
+                    <Card className="mt-10  border-black border-[1px] ">
                       <CardHeader color="white" className="relative h-96 ">
                         <div className=" py-3">
                           <h1 className="bg-green-600 dark:bg-blue-gray-900  w-24 h-15 text-center pt-3 pb-1 text-white rounded font-bold">

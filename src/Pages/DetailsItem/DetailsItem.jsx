@@ -44,43 +44,27 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setcounter, counter }) => {
   };
 
   return (
-    <div className="w-full h-full dark:bg-blue-gray-900 bg-[#EAEAEA]  ">
+    <div className="w-full min-h-[90vh] flex flex-col justify-center  dark:bg-blue-gray-900 bg-[#EAEAEA] ">
       <div className="w-full  bg-white dark:bg-blue-gray-800 rounded-xl container mx-auto   ">
         <div className="w-full flex flex-col md:flex-row ">
-          <div className="w-full md:w-[60%] flex flex-col justify-center items-center gap-y-10 ">
+          <div className="w-full md:w-[60%] flex flex-col justify-center items-center  ">
             {details.images?.map((item, i) => (
               <div className="w-full " key={i}>
                 <div className="  flex justify-center items-center">
                   {i == 0 && (
-                    <img src={item} alt="" className="w-[40%] md:w-[35%]" />
+                    <img src={item} alt="" className="w-[40%] md:w-[45%] " />
                   )}
                 </div>
               </div>
             ))}
             {/*  */}
-            <div className="flex md:justify-evenly mt-10 flex-row">
-              {details.images?.map((item, i) => (
-                <div
-                  className="flex justify-center  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
-                  key={i}
-                >
-                  {i == 1 && (
-                    <img
-                      src={item}
-                      alt=""
-                      className="w-[20%] md:w-[20%]     hover:border-2 hover:border-green-900 hover:dark:border-white"
-                    />
-                  )}
-                </div>
-              ))}
-            </div>
           </div>
           <div className="w-full md:w-[45%] me-5">
-            <h1 className="text-black dark:text-white font-bold mt-5 text-center md:text-start">
+            <h1 className="text-black dark:text-white font-bold  text-center md:text-start mt-5">
               {details ? details.title : ""}
             </h1>
             <hr className="border-t-2 border-gray-300 mt-2  dark:border-black" />
-            <h2 className="text-gray-600 mt-5 dark:text-gray-200 ms-2 md:ms-0">
+            <h2 className="text-gray-600 mt-5 dark:text-gray-200 ms-2 md:ms-0 ">
               {details ? details.description : ""}
             </h2>
             <div className=" w-full  flex flex-col md:flex-row gap-y-3  gap-x-3 mt-10 justify-center items-center md:items-start md:justify-start">
@@ -134,7 +118,7 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setcounter, counter }) => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-x-3 mt-20 mb-2 justify-center md:justify-start">
+            <div className="flex gap-x-3 mt-10 mb-2 justify-center md:justify-start">
               <div className="relative flex ">
                 <Button
                   onClick={() => addition(details)}
@@ -156,6 +140,7 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setcounter, counter }) => {
             </div>
           </div>
         </div>
+        {/* <div className="w-full dark:bg-blue-gray-900 bg-[#EAEAEA] "></div> */}
       </div>
     </div>
   );
