@@ -117,7 +117,7 @@ const AddToCart = ({ aboutAdding, setAboutAdding, counter, setcounter }) => {
                       return (
                         <tr
                           key={index}
-                          className="text-center flex-col md:flex-row w-full dark:bg-[#252B43] bg-white dark:text-white text-black"
+                          className="text-center flex-col md:flex-row w-full dark:bg-[#252B43] bg-[#f5eded] dark:text-white text-black"
                         >
                           <td className="">
                             <Typography variant="small" className="font-normal">
@@ -185,7 +185,7 @@ const AddToCart = ({ aboutAdding, setAboutAdding, counter, setcounter }) => {
               </table>
             </Card>
           </div>
-          <div className="w-[80%]   container mx-auto dark:bg-[#252B43] bg-gray-300 rounded-xl mt-5 flex flex-col ">
+          <div className="w-[80%]   container mx-auto dark:bg-[#252B43] bg-gray-300 rounded-xl mt-5 flex flex-col mb-[1em]">
             <div className="px-3 mt-2 flex flex-col md:flex-row justify-center md:justify-between items-center w-full">
               <div className="flex relative">
                 <Button
