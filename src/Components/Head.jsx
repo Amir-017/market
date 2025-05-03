@@ -177,7 +177,7 @@ const Head = ({
                   <div
                     // as={Link}
                     variant="small"
-                    className={` p-1 font-medium text-white relative    cursor-pointer h-[55px] `}
+                    className={` p-1 font-medium text-white relative    cursor-pointer h-[52px] `}
                   >
                     <Badge
                       content={counter}
@@ -189,7 +189,7 @@ const Head = ({
                     </Badge>
                   </div>
 
-                  <div className="invisible  group-hover:visible mr-5  rounded-xl absolute bg-gradient-to-r from-green-100 to-green-200 dark:from-blue-gray-800 dark:to-blue-gray-900 shadow-lg  left-[42em] top-[8rem] transition-transform transform hover:scale-105">
+                  <div className="invisible  group-hover:visible mr-5  rounded-xl absolute bg-gradient-to-r from-green-100 to-green-200 dark:from-blue-gray-800 dark:to-blue-gray-900 shadow-lg  left-[42em] top-[8rem] ">
                     {aboutAdding && aboutAdding.length === 0 ? (
                       <div className="ms-[1em] flex flex-col justify-center items-center gap-y-4 p-5">
                         <h2 className="text-gray-700 dark:text-gray-300 capitalize text-lg font-semibold">
@@ -227,7 +227,7 @@ const Head = ({
                             Review your items below
                           </p>
                         </div>
-                        <div className="flex flex-col items-center mt-4 gap-y-3">
+                        <div className="flex flex-col items-center mt-4 gap-y-3 transition-transform transform hover:scale-105">
                           {aboutAdding.map((item, i) => (
                             <Typography
                               as={Link}
@@ -362,7 +362,7 @@ const Head = ({
             </ul>
           </div>
           <div className="flex">
-            <div className="group">
+            <div className="group w-[50px]">
               <div
                 variant="small"
                 className={`ms-3 me-3  font-medium text-white relative  cursor-pointer h-[50px]  hover:dark:text-[#9b9ca5]`}
@@ -376,7 +376,7 @@ const Head = ({
                   </Link>
                 </Badge>
               </div>
-              <div className=" block lg:hidden   group-hover:visible rounded-xl absolute bg-gradient-to-r from-green-100 to-green-200 dark:from-blue-gray-800 dark:to-blue-gray-900 shadow-lg left-0 top-[22em]  transition-transform transform hover:scale-105">
+              <div className=" block lg:hidden invisible  group-hover:visible rounded-xl absolute bg-gradient-to-r from-green-100 to-green-200 dark:from-blue-gray-800 dark:to-blue-gray-900 shadow-lg left-0 top-[22em]  ">
                 {aboutAdding && aboutAdding.length === 0 ? (
                   <div className="ms-[1em] flex flex-col justify-center items-center gap-y-4 p-[2em]">
                     <h2 className="text-gray-700 dark:text-gray-300 capitalize text-lg font-semibold">
@@ -414,7 +414,7 @@ const Head = ({
                         Click to show your products
                       </p>
                     </div>
-                    <div className="flex flex-col items-center mt-4 gap-y-3">
+                    <div className="flex flex-col items-center mt-4 gap-y-3 transition-transform transform hover:scale-105">
                       {aboutAdding &&
                         aboutAdding.map((item, i) => (
                           <Typography

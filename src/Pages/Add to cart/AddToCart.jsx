@@ -64,17 +64,13 @@ const AddToCart = ({ aboutAdding, setAboutAdding, counter, setcounter }) => {
       {aboutAdding.length == 0 ? (
         <div className="w-full dark:bg-blue-gray-900 bg-gray-300 min-h-screen flex justify-center items-center ">
           <div className="  flex flex-col justify-center items-center  gap-y-3">
-            <img
-              src={add}
-              alt=""
-              className=" w-[200px] h-[200px] rounded-full"
-            />
+            <img src={add} alt="" className=" w-[200px] h-[200px] " />
             <h2 className="text-gray-600 capitalize dark:text-gray-300">
               your shopping cart is empty
             </h2>
             <button
               onClick={go}
-              className=" font-bold capitalize rounded-md bg-green-700 dark:bg-[#282d45] py-3 px-10  border border-transparent text-center text-sm text-white transition-all shadow-lg hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
+              className=" font-bold capitalize rounded-md bg-green-700 dark:bg-[#282d45] py-3 px-10 text-white shadow-md hover:shadow-lg hover:bg-green-800 dark:hover:bg-[#1f243b] transition-all"
               type="button"
             >
               go shopping now
@@ -190,7 +186,7 @@ const AddToCart = ({ aboutAdding, setAboutAdding, counter, setcounter }) => {
               <div className="flex relative">
                 <Button
                   onClick={clear}
-                  className="font-bold text-[.8em] border-[2px]  text-white border-transparent hover:shadow-lg bg-red-900"
+                  className="font-bold text-[.8em] border-[2px]  text-white border-transparent hover:shadow-lg bg-red-900 hover:bg-red-800"
                 >
                   Clear Data
                 </Button>

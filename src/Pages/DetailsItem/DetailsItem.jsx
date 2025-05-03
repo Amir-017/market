@@ -124,7 +124,7 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setcounter, counter }) => {
                   onClick={() => addition(details)}
                   color="green"
                   size="lg"
-                  className="dark:bg-[#282d45]  bg-green-900 hover:shadow capitalize font-bold "
+                  className="dark:bg-[#232a45]   hover:dark:dark:bg-[#181f39]  bg-green-800 hover:bg-green-900 hover:shadow capitalize font-bold "
                 >
                   add to cart
                 </Button>
@@ -132,7 +132,7 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setcounter, counter }) => {
               </div>
 
               <button
-                className="font-bold dark:bg-[#232a45]   capitalize rounded-md bg-green-900 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-lg hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
+                className="font-bold dark:bg-[#232a45]   hover:dark:dark:bg-[#181f39]  capitalize rounded-md bg-green-800 hover:bg-green-900 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-lg hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700  active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
                 type="button"
               >
                 buy now
