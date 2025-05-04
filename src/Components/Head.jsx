@@ -11,7 +11,6 @@ import {
 import { MdOutlineMenuOpen } from "react-icons/md";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, useNavigate } from "react-router-dom";
-import add from "../imges/shopping_cart-b0846037.png";
 import { CiShoppingCart, CiSun } from "react-icons/ci";
 import { FaRegMoon } from "react-icons/fa";
 const Head = ({
@@ -181,7 +180,7 @@ const Head = ({
                   >
                     <Badge
                       content={counter}
-                      className={counter > 1 ? "bg-green-900" : "bg-red-900 "}
+                      className={counter >= 1 ? "bg-green-900" : "bg-red-900 "}
                     >
                       <Link to="/adding">
                         <CiShoppingCart className="text-4xl text-white hover:text-green-300 hover:dark:text-[#9b9ca5]" />
