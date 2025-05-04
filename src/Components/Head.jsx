@@ -260,7 +260,7 @@ const Head = ({
                   variant="small"
                   className="p-1 hover:text-green-300 font-medium hover:dark:text-[#9b9ca5] text-white relative"
                 >
-                  {!darkLight ? (
+                  {darkLight ? (
                     <button
                       onClick={setLightTheme}
                       className=" absolute left-[-14px] top-[-2px]  text-4xl block w-full whitespace-nowrap  px-4 py-2  font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
@@ -448,7 +448,7 @@ const Head = ({
               variant="small"
               className="p-1 hover:text-green-300 hover:dark:text-[#9b9ca5]  font-medium text-white relative"
             >
-              {!darkLight ? (
+              {darkLight ? (
                 <button
                   onClick={setLightTheme}
                   className=" absolute left-[1em] bottom-[1.7em]  text-4xl block w-full whitespace-nowrap  px-4 py-2  font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
