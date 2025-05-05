@@ -4,14 +4,14 @@ import { useParams } from "react-router-dom";
 import { CiShoppingCart } from "react-icons/ci";
 import { Button } from "@material-tailwind/react";
 const DetailsItem = ({ aboutAdding, setAboutAdding, setcounter, counter }) => {
-  const [details, setDetails] = useState({});
+  const [detailsProduct, setDetailsProduct] = useState({});
   const { id } = useParams();
 
   const getDetails = () => {
     axios({
       method: "get",
       url: `https://dummyjson.com/products/${id}`,
-    }).then((data) => setDetails(data.data));
+    }).then((data) => setDetailsProduct(data.data));
   };
 
   useEffect(() => {
@@ -48,7 +48,7 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setcounter, counter }) => {
       <div className="w-full  bg-white dark:bg-blue-gray-800 rounded-xl container mx-auto   ">
         <div className="w-full flex flex-col md:flex-row ">
           <div className="w-full md:w-[60%] flex flex-col justify-center items-center  ">
-            {details.images?.map((item, i) => (
+            {detailsProduct.images?.map((item, i) => (
               <div className="w-full " key={i}>
                 <div className="  flex justify-center items-center">
                   {i == 0 && (
@@ -61,27 +61,27 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setcounter, counter }) => {
           </div>
           <div className="w-full md:w-[45%] me-5">
             <h1 className="text-black dark:text-white font-bold  text-center md:text-start mt-5">
-              {details ? details.title : ""}
+              {detailsProduct ? detailsProduct.title : ""}
             </h1>
             <hr className="border-t-2 border-gray-300 mt-2  dark:border-black" />
             <h2 className="text-gray-600 mt-5 dark:text-gray-200 ms-2 md:ms-0 ">
-              {details ? details.description : ""}
+              {detailsProduct ? detailsProduct.description : ""}
             </h2>
             <div className=" w-full  flex flex-col md:flex-row gap-y-3  gap-x-3 mt-10 justify-center items-center md:items-start md:justify-start">
               <h1 className="font-bold dark:text-white   ">
                 Rating :{" "}
                 <span className="dark:text-blue-gray-400 text-green-500 underline">
-                  {details ? details.rating : ""}
+                  {detailsProduct ? detailsProduct.rating : ""}
                 </span>
               </h1>{" "}
               <span className="font-bold dark:text-gray-400">||</span>{" "}
               <h1 className="font-bold dark:text-white text-center">
                 Brand :{" "}
                 <span className="text-green-500 underline dark:text-blue-gray-400">
-                  {details.brand
-                    ? details.brand
-                    : details.tags
-                    ? details.tags.map((im) => im)
+                  {detailsProduct.brand
+                    ? detailsProduct.brand
+                    : detailsProduct.tags
+                    ? detailsProduct.tags.map((im) => im)
                     : "UNKNOWN"}
                 </span>
               </h1>{" "}
@@ -89,31 +89,35 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setcounter, counter }) => {
               <h1 className="font-bold dark:text-white">
                 Category :{" "}
                 <span className="text-green-500 underline dark:text-blue-gray-400">
-                  {details ? details.category : ""}
+                  {detailsProduct ? detailsProduct.category : ""}
                 </span>
               </h1>{" "}
             </div>
             <div className="w-full mt-16 dark:bg-[#252B43] bg-gray-200  rounded-xl container ps-2 dark:text-gray-400 text-gray-600 ">
               <div className="flex gap-x-2 pt-5 justify-center md:justify-start">
                 <h1 className="font-bold line-through me-1 ">
-                  <span className=" me-1">{details ? details.price : ""}</span>
+                  <span className=" me-1">
+                    {detailsProduct ? detailsProduct.price : ""}
+                  </span>
                   EGP
                 </h1>
                 <span className="text-grya-600">inclusive in takes</span>
               </div>
               <div className="flex gap-x-4 mt-5 h-16 justify-center md:justify-start">
                 <h1 className=" font-bold dark:text-green-500 text-green-900 text-[1.5rem]">
-                  {details &&
+                  {detailsProduct &&
                     (
-                      details.price -
-                      details.price * (details.discountPercentage / 100)
+                      detailsProduct.price -
+                      detailsProduct.price *
+                        (detailsProduct.discountPercentage / 100)
                     ).toFixed(2)}{" "}
                   EGP
                 </h1>
 
                 <div className="text-white    italic text-xl">
                   <h1 className="dark:bg-[#2c324a] bg-green-800 px-3 py-1 rounded">
-                    {details ? details.discountPercentage : ""} % off
+                    {detailsProduct ? detailsProduct.discountPercentage : ""} %
+                    off
                   </h1>
                 </div>
               </div>
@@ -121,7 +125,7 @@ const DetailsItem = ({ aboutAdding, setAboutAdding, setcounter, counter }) => {
             <div className="flex gap-x-3 mt-10 mb-2 justify-center md:justify-start">
               <div className="relative flex ">
                 <Button
-                  onClick={() => addition(details)}
+                  onClick={() => addition(detailsProduct)}
                   color="green"
                   size="lg"
                   className="dark:bg-[#232a45]   hover:dark:dark:bg-[#181f39]  bg-green-800 hover:bg-green-900 hover:shadow capitalize font-bold "

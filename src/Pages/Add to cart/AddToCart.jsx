@@ -128,7 +128,6 @@ const AddToCart = ({ aboutAdding, setAboutAdding, counter, setcounter }) => {
                           <td className="flex justify-center">
                             <Typography
                               as="a"
-                              href="#"
                               variant="small"
                               className="font-medium"
                             >
@@ -192,7 +191,7 @@ const AddToCart = ({ aboutAdding, setAboutAdding, counter, setcounter }) => {
                 </Button>
                 <FaRegTrashCan className="mt-[.9rem]  absolute right-1 text-black" />
               </div>
-              <h1 className="text-xl mt-2 text-black dark:text-white">
+              <h1 className="text-xl mt-2 text-black dark:text-white text-center">
                 Total (1) Items :{" "}
                 <span className="dark:text-blue-gray-400 text-green-900 font-bold text-[1rem] underline">
                   {aboutAdding &&
