@@ -368,7 +368,7 @@ const Head = ({
               >
                 <Badge
                   content={counter}
-                  className={counter > 1 ? "bg-green-900" : "bg-red-900"}
+                  className={counter >= 1 ? "bg-green-900" : "bg-red-900"}
                 >
                   <Link to="/adding">
                     <CiShoppingCart className="text-4xl text-white hover:text-green-300 " />
